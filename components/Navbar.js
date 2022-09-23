@@ -13,6 +13,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Image,
 } from "@chakra-ui/react";
 import { useWallet } from "use-wallet";
 
@@ -50,32 +51,9 @@ export default function NavBar() {
       >
         <Container as={Flex} maxW={"7xl"} align={"center"}>
           <Flex flex={{ base: 1 }} justify="start" ml={{ base: -2, md: 0 }}>
-            <Heading
-              textAlign="left"
-              fontFamily={"heading"}
-              color={useColorModeValue("teal.800", "white")}
-              as="h2"
-              size="lg"
-            >
-              <Box
-                as={"span"}
-                color={useColorModeValue("teal.400", "teal.300")}
-                position={"relative"}
-                zIndex={10}
-                _after={{
-                  content: '""',
-                  position: "absolute",
-                  left: 0,
-                  bottom: 0,
-                  w: "full",
-                  h: "30%",
-                  bg: useColorModeValue("teal.100", "teal.900"),
-                  zIndex: -1,
-                }}
-              >
-                <NextLink href="/">🤝ETHDonasi</NextLink>
-              </Box>
-            </Heading>
+            <NextLink href="/">
+              <Image src="/logo.png" alt="logo" width="150px" height="50px" />
+            </NextLink>
           </Flex>
           <Stack
             flex={{ base: 1, md: 0 }}

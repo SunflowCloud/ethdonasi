@@ -9,6 +9,7 @@ import {
   VisuallyHidden,
   Heading,
   useBreakpointValue,
+  Image,
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaGithub, FaGlobe } from "react-icons/fa";
 import NextLink from "next/link";
@@ -53,32 +54,9 @@ export default function Footer() {
         justify={"center"}
         align={"center"}
       >
-        <Heading
-          textAlign={useBreakpointValue({ base: "center", md: "left" })}
-          fontFamily={"heading"}
-          color={useColorModeValue("teal.800", "white")}
-          as="h2"
-          size="lg"
-        >
-          <Box
-            as={"span"}
-            color={useColorModeValue("teal.400", "teal.300")}
-            position={"relative"}
-            zIndex={10}
-            _after={{
-              content: '""',
-              position: "absolute",
-              left: 0,
-              bottom: 0,
-              w: "full",
-              h: "30%",
-              bg: useColorModeValue("teal.100", "teal.900"),
-              zIndex: -1,
-            }}
-          >
-            <NextLink href="/">🤝ETHDonasi</NextLink>
-          </Box>
-        </Heading>
+        <NextLink href="/">
+          <Image src="/logo.png" alt="logo" width="150px" height="50px" />
+        </NextLink>
         <Stack direction={"row"} spacing={6}>
           <NextLink href="/">Home</NextLink>
           <Link
